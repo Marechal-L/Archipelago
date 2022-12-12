@@ -2,7 +2,7 @@ import sys
 
 from BaseClasses import Location
 from worlds.dark_souls_3.data.locations_data import location_tables, painted_world_table, dreg_heap_table, \
-    ringed_city_table
+    ringed_city_table, dlc_progressive_locations
 
 
 class DarkSouls3Location(Location):

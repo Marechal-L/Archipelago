@@ -13,7 +13,7 @@ from .data.locations_data import location_dictionary, fire_link_shrine_table, \
     farron_keep_table, catacombs_of_carthus_table, smouldering_lake_table, irithyll_of_the_boreal_valley_table, \
     irithyll_dungeon_table, profaned_capital_table, anor_londo_table, lothric_castle_table, grand_archives_table, \
     untended_graves_table, archdragon_peak_table, firelink_shrine_bell_tower_table, progressive_locations, \
-    progressive_locations_2, progressive_locations_3, painted_world_table, dreg_heap_table, ringed_city_table
+    progressive_locations_2, progressive_locations_3, painted_world_table, dreg_heap_table, ringed_city_table, dlc_progressive_locations
 from ..AutoWorld import World, WebWorld
 from ..generic.Rules import set_rule, add_item_rule
 
@@ -80,7 +80,7 @@ class DarkSouls3World(World):
 
         if self.multiworld.enable_progressive_locations[self.player].value:
             menu_region = self.create_region("Menu", {**progressive_locations, **progressive_locations_2,
-                                                      **progressive_locations_3})
+                                                      **progressive_locations_3, **dlc_progressive_locations})
         else:
             menu_region = self.create_region("Menu", None)
 
@@ -225,6 +225,11 @@ class DarkSouls3World(World):
                                state.has("Cinders of a Lord - Yhorm the Giant", self.player) and
                                state.has("Cinders of a Lord - Aldrich", self.player) and
                                state.has("Cinders of a Lord - Lothric Prince", self.player))
+        # DLC Access Rules Below
+        set_rule(self.multiworld.get_entrance("Goto Painted World of Ariandel", self.player),
+                 lambda state: state.has("Contraption Key", self.player))
+        set_rule(self.multiworld.get_entrance("Goto Ringed City", self.player),
+                 lambda state: state.has("Small Envoy Banner", self.player))
 
         # Define the access rules to some specific locations
         set_rule(self.multiworld.get_location("HWL: Soul of the Dancer", self.player),

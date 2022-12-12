@@ -238,6 +238,8 @@ goods_3_table = { # Added by Br00ty
     **{"Duel Charm #"+str(i): 0x40000130 for i in range(1, 3)},
     **{"Rusted Coin #"+str(i): 0x400001C7 for i in range(1, 3)},
     **{"Rusted Gold Coin #"+str(i): 0x400001C9 for i in range(1, 3)},
+    **{"Titanite Chunk #"+str(i): 0x400003EA for i in range(1, 22)},
+    **{"Twinkling Titanite #"+str(i): 0x40000406 for i in range(1, 8)},
 }
 
 dlc_goods_table = {
@@ -245,6 +247,20 @@ dlc_goods_table = {
     "Soul of the Demon Prince": 0x400002EA,
     "Soul of Darkeater Midir": 0x400002EB,
     "Soul of Slave Knight Gael": 0x400002E9
+}
+
+dlc_goods_2_table = {
+    **{"Large Soul of an Unknown Traveler #" + str(i): 0x40000194 for i in range(1, 10)},
+    **{"Soul of a Weary Warrior #"+str(i): 0x40000197 for i in range(1, 6)},
+    **{"Large Soul of a Weary Warrior #"+str(i): 0x40000198 for i in range(1, 7)},
+    **{"Soul of a Crestfallen Knight #"+str(i): 0x40000199 for i in range(1, 7)},
+    **{"Large Soul of a Crestfallen Knight #"+str(i): 0x4000019A for i in range(1, 4)},
+    **{"Homeward Bone #"+str(i): 0x4000015E for i in range(1, 7)},
+    **{"Large Titanite Shard #"+str(i): 0x400003E9 for i in range(1, 4)},
+    **{"Titanite Chunk #"+str(i): 0x400003EA for i in range(1, 16)},
+    **{"Twinkling Titanite #"+str(i): 0x40000406 for i in range(1, 6)},
+    **{"Rusted Coin #"+str(i): 0x400001C7 for i in range(1, 4)},
+    **{"Ember #"+str(i): 0x400001F4 for i in range(1, 11)},
 }
 
 armor_table = {
@@ -549,7 +565,9 @@ misc_items_table = {
 }
 
 dlc_misc_table = {
-    "Captains Ashes": 0x4000086A
+    "Captains Ashes": 0x4000086A,
+    "Contraption Key": 0x4000086B,
+    "Small Envoy Banner": 0x4000086C
 }
 
 key_items_list = {
@@ -568,16 +586,18 @@ key_items_list = {
     "Jailbreaker's Key",
     "Prisoner Chief's Ashes",
     "Old Cell Key",
-    "Jailer's Key Ring"
+    "Jailer's Key Ring",
+    "Contraption Key", # DLC
+    "Small Envoy Banner" # DLC
 }
 
 item_tables = [weapons_upgrade_5_table, weapons_upgrade_10_table, shields_table,
                armor_table, rings_table, spells_table, misc_items_table, goods_table, goods_2_table, goods_3_table,
                dlc_weapons_upgrade_5_table, dlc_weapons_upgrade_10_table, dlc_shields_table, dlc_goods_table,
-               dlc_armor_table, dlc_spells_table, dlc_ring_table, dlc_misc_table]
+               dlc_armor_table, dlc_spells_table, dlc_ring_table, dlc_misc_table, dlc_goods_2_table]
 
 item_dictionary = {**weapons_upgrade_5_table, **weapons_upgrade_10_table, **shields_table,
                    **armor_table, **rings_table, **spells_table, **misc_items_table, **goods_table, **goods_2_table,
                    **goods_3_table, **dlc_weapons_upgrade_5_table, **dlc_weapons_upgrade_10_table, **dlc_shields_table,
-                   **dlc_goods_table, **dlc_armor_table, **dlc_spells_table, **dlc_ring_table, **dlc_misc_table}
+                   **dlc_goods_table, **dlc_armor_table, **dlc_spells_table, **dlc_ring_table, **dlc_misc_table, **dlc_goods_2_table}
 
