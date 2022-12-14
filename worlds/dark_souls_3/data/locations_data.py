@@ -514,7 +514,7 @@ ringed_city_table = { # DLC
     "RC: Ringed Knight Straight Sword": 0x00225510,
     "RC: Preacher's Right Arm": 0x00CD1400,
     "RC: White Birch Bow": 0x00D77440,
-    "RC: Church Guardian Shiv": 0x4000013B, # Assigned to "Demon's Scar"
+    "RC: Church Guardian Shiv": 0x4000013B,
     "RC: Dragonhead Greatshield": 0x01452A30,
     "RC: Ringed Knight Paired Greatswords": 0x00F69500,
     "RC: Shira's Crown": 0x11C22260,
@@ -529,12 +529,12 @@ ringed_city_table = { # DLC
     "RC: Iron Dragonslayer Gauntlets": 0x1405FFB0,
     "RC: Iron Dragonslayer Leggings": 0x14060398,
     "RC: Lightning Arrow": 0x40358B08,
-    "RC: Ritual Spear Fragment": 0x4000028A, # Assigned to "Frayed Blade"
+    "RC: Ritual Spear Fragment": 0x4000028A,
     "RC: Antiquated Plain Garb": 0x11B2E408,
-    "RC: Violet Wrappings": 0x11B2E7F0, # Assigned to "Gael's Greatsword"
+    "RC: Violet Wrappings": 0x11B2E7F0,
     "RC: Soul of Darkeater Midir": 0x400002EB,
     "RC: Soul of Slave Knight Gael": 0x400002E9,
-    "RC: Blood of the Dark Souls": 0x4000086E, # Assigned to "Repeating Crossbow"
+    "RC: Blood of the Dark Souls": 0x4000086E,
 }
 
 progressive_locations = {
@@ -553,53 +553,50 @@ progressive_locations = {
     **{"Throwing Knife #"+str(i): 0x40000136 for i in range(1, 3)},
 
     # Souls
-    **{"Soul of a Deserted Corpse #" + str(i): 0x40000191 for i in range(1, 6)},
-    **{"Large Soul of a Deserted Corpse #" + str(i): 0x40000192 for i in range(1, 6)},
-    **{"Soul of an Unknown Traveler #" + str(i): 0x40000193 for i in range(1, 6)},
-    **{"Large Soul of an Unknown Traveler #" + str(i): 0x40000194 for i in range(1, 6)}
+    **{"Soul of a Deserted Corpse #"+str(i): 0x40000191 for i in range(1, 6)},
+    **{"Large Soul of a Deserted Corpse #"+str(i): 0x40000192 for i in range(1, 6)},
+    **{"Soul of an Unknown Traveler #"+str(i): 0x40000193 for i in range(1, 6)},
+    **{"Large Soul of an Unknown Traveler #"+str(i): 0x40000194 for i in range(1, 6)}
 }
 
 progressive_locations_2 = {
     ##Added by Br00ty
-    "HWL: Gold Pine Resin": 0x4000014B,
-    "US: Charcoal Pine Resin": 0x4000014A,
-    "FK: Gold Pine Bundle": 0x40000155,
-    "CC: Carthus Rouge": 0x4000014F,
-    "ID: Pale Pine Resin": 0x40000150,
-    **{"Titanite Scale #" + str(i): 0x400003FC for i in range(1, 27)},
-    **{"Fading Soul #" + str(i): 0x40000190 for i in range(1, 4)},
+    **{"Titanite Shard #"+str(i): 0x400003E8 for i in range(11, 16)},
+    **{"Large Titanite Shard #"+str(i): 0x400003E9 for i in range(11, 16)},
+    **{"Fading Soul #"+str(i): 0x40000190 for i in range(1, 4)},
     **{"Ring of Sacrifice #"+str(i): 0x20004EF2 for i in range(1, 5)},
     **{"Homeward Bone #"+str(i): 0x4000015E for i in range(1, 17)},
-    **{"Ember #"+str(i): 0x400001F4 for i in range(1, 46)},
+    **{"Ember #"+str(i): 0x400001F4 for i in range(1, 46)}
 }
 
-progressive_locations_3 = {
-    **{"Green Blossom #" + str(i): 0x40000104 for i in range(1, 7)},
-    **{"Human Pine Resin #" + str(i): 0x4000014E for i in range(1, 3)},
-    **{"Charcoal Pine Bundle #" + str(i): 0x40000154 for i in range(1, 3)},
-    **{"Rotten Pine Resin #" + str(i): 0x40000157 for i in range(1, 3)},
-    **{"Pale Tongue #" + str(i): 0x40000175 for i in range(1, 3)},
-    **{"Alluring Skull #" + str(i): 0x40000126 for i in range(1, 3)},
-    **{"Undead Hunter Charm #" + str(i): 0x40000128 for i in range(1, 3)},
-    **{"Duel Charm #" + str(i): 0x40000130 for i in range(1, 3)},
-    **{"Rusted Coin #" + str(i): 0x400001C7 for i in range(1, 3)},
-    **{"Rusted Gold Coin #" + str(i): 0x400001C9 for i in range(1, 4)},
+progressive_locations_3 = { # 231 Total Progressive locations Marked "#"
+    **{"Titanite Scale #"+str(i): 0x400003FC for i in range(1, 27)},
+    **{"Green Blossom #"+str(i): 0x40000104 for i in range(1, 7)},
+    **{"Human Pine Resin #"+str(i): 0x4000014E for i in range(1, 3)},
+    **{"Charcoal Pine Bundle #"+str(i): 0x40000154 for i in range(1, 3)},
+    **{"Rotten Pine Resin #"+str(i): 0x40000157 for i in range(1, 3)},
+    **{"Pale Tongue #"+str(i): 0x40000175 for i in range(1, 3)},
+    **{"Alluring Skull #"+str(i): 0x40000126 for i in range(1, 3)},
+    **{"Undead Hunter Charm #"+str(i): 0x40000128 for i in range(1, 3)},
+    **{"Duel Charm #"+str(i): 0x40000130 for i in range(1, 3)},
+    **{"Rusted Coin #"+str(i): 0x400001C7 for i in range(1, 3)},
+    **{"Rusted Gold Coin #"+str(i): 0x400001C9 for i in range(1, 4)},
     **{"Titanite Chunk #"+str(i): 0x400003EA for i in range(1, 22)},
-    **{"Twinkling Titanite #"+str(i): 0x40000406 for i in range(1, 8)},
+    **{"Twinkling Titanite #"+str(i): 0x40000406 for i in range(1, 8)}
 }
 
-dlc_progressive_locations = {
-    **{"Large Soul of an Unknown Traveler #" + str(i): 0x40000194 for i in range(1, 10)},
-    **{"Soul of a Weary Warrior #"+str(i): 0x40000197 for i in range(1, 6)},
-    **{"Large Soul of a Weary Warrior #"+str(i): 0x40000198 for i in range(1, 7)},
-    **{"Soul of a Crestfallen Knight #"+str(i): 0x40000199 for i in range(1, 7)},
-    **{"Large Soul of a Crestfallen Knight #"+str(i): 0x4000019A for i in range(1, 4)},
-    **{"Homeward Bone #"+str(i): 0x4000015E for i in range(1, 7)},
-    **{"Large Titanite Shard #"+str(i): 0x400003E9 for i in range(1, 4)},
-    **{"Titanite Chunk #"+str(i): 0x400003EA for i in range(1, 16)},
-    **{"Twinkling Titanite #"+str(i): 0x40000406 for i in range(1, 6)},
-    **{"Rusted Coin #"+str(i): 0x400001C7 for i in range(1, 4)},
-    **{"Ember #"+str(i): 0x400001F4 for i in range(1, 11)},
+dlc_progressive_locations = { #71
+    **{"Large Soul of an Unknown Traveler $"+str(i): 0x40000194 for i in range(1, 10)},
+    **{"Soul of a Weary Warrior $"+str(i): 0x40000197 for i in range(1, 6)},
+    **{"Large Soul of a Weary Warrior $"+str(i): 0x40000198 for i in range(1, 7)},
+    **{"Soul of a Crestfallen Knight $"+str(i): 0x40000199 for i in range(1, 7)},
+    **{"Large Soul of a Crestfallen Knight $"+str(i): 0x4000019A for i in range(1, 4)},
+    **{"Homeward Bone $"+str(i): 0x4000015E for i in range(1, 7)},
+    **{"Large Titanite Shard $"+str(i): 0x400003E9 for i in range(1, 4)},
+    **{"Titanite Chunk $"+str(i): 0x400003EA for i in range(1, 16)},
+    **{"Twinkling Titanite $"+str(i): 0x40000406 for i in range(1, 6)},
+    **{"Rusted Coin $"+str(i): 0x400001C7 for i in range(1, 4)},
+    **{"Ember $"+str(i): 0x400001F4 for i in range(1, 11)}
 }
 
 location_tables = [fire_link_shrine_table, firelink_shrine_bell_tower_table, high_wall_of_lothric, undead_settlement_table, road_of_sacrifice_table,

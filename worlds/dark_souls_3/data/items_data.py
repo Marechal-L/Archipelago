@@ -55,10 +55,10 @@ weapons_upgrade_5_table = {
 dlc_weapons_upgrade_5_table = {
     "Friede's Great Scythe": 0x009B55A0,
     "Rose of Ariandel": 0x00B82C70,
-    "Demon's Scar": 0x003F04D0, # Assigned to "RC: Church Guardian Shiv"
-    "Frayed Blade": 0x004D35A0, # Assigned to "RC: Ritual Spear Fragment"
-    "Gael's Greatsword": 0x00227C20, # Assigned to "RC: Violet Wrappings"
-    "Repeating Crossbow": 0x00D885B0, # Assigned to "RC: Blood of the Dark Souls"
+    "Demon's Scar": 0x003F04D0,
+    "Frayed Blade": 0x004D35A0,
+    "Gael's Greatsword": 0x00227C20,
+    "Repeating Crossbow": 0x00D885B0,
     "Onyx Blade": 0x00222E00, # VILHELM FIGHT
     "Earth Seeker": 0x006D8EE0,
     "Quakestone Hammer": 0x007ECCF0,
@@ -66,7 +66,7 @@ dlc_weapons_upgrade_5_table = {
     "Valorheart": 0x00F646E0,
     "Aquamarine Dagger": 0x00116520,
     "Ringed Knight Straight Sword": 0x00225510,
-    #"Ledo's Great Hammer": 0x007EF400, # INVADER FIGHT
+    "Ledo's Great Hammer": 0x007EF400, # INVADER FIGHT
     "Ringed Knight Spear": 0x008CFDC0,
     "Crucifix of the Mad King": 0x008D4BE0,
     "Sacred Chime of Filianore": 0x00CCECF0,
@@ -76,7 +76,7 @@ dlc_weapons_upgrade_5_table = {
 }
 
 weapons_upgrade_10_table = {
-    "Broken Straight Sword": 0x001EF9B0,
+    #"Broken Straight Sword": 0x001EF9B0, #Removed to fix item count
     "Deep Battle Axe": 0x0006AFA54,
     "Club": 0x007A1200,
     "Claymore": 0x005BDBA0,
@@ -139,7 +139,7 @@ dlc_weapons_upgrade_10_table = {
     "Murky Hand Scythe": 0x00118C30,
     "Herald Curved Greatsword": 0x006159E0,
     "Lothric War Banner": 0x008D24D0,
-    #"Splitleaf Greatsword": 0x009B2E90, # SHOP ITEM
+    "Splitleaf Greatsword": 0x009B2E90, # SHOP ITEM
     "Murky Longstaff": 0x00CCC5E0,
 }
 
@@ -213,21 +213,16 @@ goods_table = {
 }
 
 goods_2_table = { # Added by Br00ty
-    "HWL: Gold Pine Resin": 0x4000014B,
-    "US: Charcoal Pine Resin": 0x4000014A,
-    "FK: Gold Pine Bundle": 0x40000155,
-    "CC: Carthus Rouge": 0x4000014F,
-    "ID: Pale Pine Resin": 0x40000150,
-    **{"Ember #"+str(i): 0x400001F4 for i in range(1, 46)},
-    **{"Titanite Shard #"+str(i): 0x400003E8 for i in range(11, 16)},
-    **{"Large Titanite Shard #"+str(i): 0x400003E9 for i in range(11, 16)},
-    **{"Titanite Scale #" + str(i): 0x400003FC for i in range(1, 27)}
-}
-
-goods_3_table = { # Added by Br00ty
-    **{"Fading Soul #" + str(i): 0x40000190 for i in range(1, 4)},
+    **{"Titanite Shard #"+str(i): 0x400003E8 for i in range(11, 19)},
+    **{"Large Titanite Shard #"+str(i): 0x400003E9 for i in range(11, 19)},
+    **{"Fading Soul #"+str(i): 0x40000190 for i in range(1, 4)},
     **{"Ring of Sacrifice #"+str(i): 0x20004EF2 for i in range(1, 5)},
     **{"Homeward Bone #"+str(i): 0x4000015E for i in range(1, 18)},
+    **{"Ember #"+str(i): 0x400001F4 for i in range(1, 46)}
+}
+
+goods_3_table = { # Added by Br00ty // 231 Total Goods Checks Marked "#"
+    **{"Titanite Scale #"+str(i): 0x400003FC for i in range(1, 27)},
     **{"Green Blossom #"+str(i): 0x40000104 for i in range(1, 7)},
     **{"Human Pine Resin #"+str(i): 0x4000014E for i in range(1, 3)},
     **{"Charcoal Pine Bundle #"+str(i): 0x40000154 for i in range(1, 3)},
@@ -239,7 +234,7 @@ goods_3_table = { # Added by Br00ty
     **{"Rusted Coin #"+str(i): 0x400001C7 for i in range(1, 3)},
     **{"Rusted Gold Coin #"+str(i): 0x400001C9 for i in range(1, 3)},
     **{"Titanite Chunk #"+str(i): 0x400003EA for i in range(1, 22)},
-    **{"Twinkling Titanite #"+str(i): 0x40000406 for i in range(1, 8)},
+    **{"Twinkling Titanite #"+str(i): 0x40000406 for i in range(1, 8)}
 }
 
 dlc_goods_table = {
@@ -249,18 +244,18 @@ dlc_goods_table = {
     "Soul of Slave Knight Gael": 0x400002E9
 }
 
-dlc_goods_2_table = {
-    **{"Large Soul of an Unknown Traveler #" + str(i): 0x40000194 for i in range(1, 10)},
-    **{"Soul of a Weary Warrior #"+str(i): 0x40000197 for i in range(1, 6)},
-    **{"Large Soul of a Weary Warrior #"+str(i): 0x40000198 for i in range(1, 7)},
-    **{"Soul of a Crestfallen Knight #"+str(i): 0x40000199 for i in range(1, 7)},
-    **{"Large Soul of a Crestfallen Knight #"+str(i): 0x4000019A for i in range(1, 4)},
-    **{"Homeward Bone #"+str(i): 0x4000015E for i in range(1, 7)},
-    **{"Large Titanite Shard #"+str(i): 0x400003E9 for i in range(1, 4)},
-    **{"Titanite Chunk #"+str(i): 0x400003EA for i in range(1, 16)},
-    **{"Twinkling Titanite #"+str(i): 0x40000406 for i in range(1, 6)},
-    **{"Rusted Coin #"+str(i): 0x400001C7 for i in range(1, 4)},
-    **{"Ember #"+str(i): 0x400001F4 for i in range(1, 11)},
+dlc_goods_2_table = { #71
+    **{"Large Soul of an Unknown Traveler $"+str(i): 0x40000194 for i in range(1, 10)},
+    **{"Soul of a Weary Warrior $"+str(i): 0x40000197 for i in range(1, 6)},
+    **{"Large Soul of a Weary Warrior $"+str(i): 0x40000198 for i in range(1, 7)},
+    **{"Soul of a Crestfallen Knight $"+str(i): 0x40000199 for i in range(1, 7)},
+    **{"Large Soul of a Crestfallen Knight $"+str(i): 0x4000019A for i in range(1, 4)},
+    **{"Homeward Bone $"+str(i): 0x4000015E for i in range(1, 7)},
+    **{"Large Titanite Shard $"+str(i): 0x400003E9 for i in range(1, 4)},
+    **{"Titanite Chunk $"+str(i): 0x400003EA for i in range(1, 16)},
+    **{"Twinkling Titanite $"+str(i): 0x40000406 for i in range(1, 6)},
+    **{"Rusted Coin $"+str(i): 0x400001C7 for i in range(1, 4)},
+    **{"Ember $"+str(i): 0x400001F4 for i in range(1, 11)}
 }
 
 armor_table = {
@@ -317,7 +312,7 @@ armor_table = {
     "Antiquated Dress": 0x15D76068,
     "Antiquated Gloves": 0x15D76450,
     "Antiquated Skirt": 0x15D76838,
-    "Ragged Mask": 0x148F4C20,
+    #"Ragged Mask": 0x148F4C20, # Removed to fix item count
     "Crown of Dusk": 0x15D75C80,
     "Pharis's Hat": 0x1487AB00,
     "Old Sage's Blindfold": 0x11945BA0,
@@ -586,9 +581,10 @@ key_items_list = {
     "Jailbreaker's Key",
     "Prisoner Chief's Ashes",
     "Old Cell Key",
-    "Jailer's Key Ring",
-    "Contraption Key", # DLC
-    "Small Envoy Banner" # DLC
+    "Jailer's Key Ring"
+    #"Contraption Key", # DLC/Maybe not necessary here?
+    #"Small Envoy Banner" # DLC/Maybe not necessary here?
+
 }
 
 item_tables = [weapons_upgrade_5_table, weapons_upgrade_10_table, shields_table,

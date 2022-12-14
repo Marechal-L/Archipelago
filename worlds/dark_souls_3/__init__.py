@@ -77,10 +77,14 @@ class DarkSouls3World(World):
         return DarkSouls3Item(name, item_classification, data, self.player)
 
     def create_regions(self):
-
         if self.multiworld.enable_progressive_locations[self.player].value:
             menu_region = self.create_region("Menu", {**progressive_locations, **progressive_locations_2,
-                                                      **progressive_locations_3, **dlc_progressive_locations})
+                                                        **progressive_locations_3})
+        else:
+            menu_region = self.create_region("Menu", None)
+
+        if self.multiworld.enable_dlc[self.player].value and self.multiworld.enable_progressive_locations[self.player].value:
+            menu_region = self.create_region("Menu", {**dlc_progressive_locations})
         else:
             menu_region = self.create_region("Menu", None)
 
@@ -197,6 +201,9 @@ class DarkSouls3World(World):
                 continue
             # Do not add DLC items if the option is disabled
             if (not self.multiworld.enable_dlc[self.player]) and DarkSouls3Item.is_dlc_item(name):
+                continue
+            # Do not add DLC Progressives (containing "$") if both options are disabled
+            if (not self.multiworld.enable_dlc[self.player]) and (not self.multiworld.enable_progressive_locations[self.player]) and "$" in name:
                 continue
             self.multiworld.itempool += [self.create_item(name)]
 
